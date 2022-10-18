@@ -9,6 +9,7 @@ public class Customer {
     private String lastName;
     private Date birthday;
     private String email;
+    // TODO find correct datatype for passwords:
     private Character password;
     private String address;
     private String city;

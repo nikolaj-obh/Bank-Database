@@ -7,20 +7,23 @@ public class Employee {
     private String lastName;
     private Boolean isAdmin;
     private String email;
-    // find correct datatype for passwords: private String password;
+    // TODO find correct datatype for passwords:
+    private Character password;
 
     public Employee(
             Long ID,
             String firstName,
             String lastName,
             Boolean isAdmin,
-            String email
+            String email,
+            Character password
     ) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.isAdmin = isAdmin;
         this.email = email;
+        this.password = password;
     }
 
     public Long getID() {
@@ -61,5 +64,13 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Character getPassword() {
+        return password;
+    }
+
+    public void setPassword(Character password) {
+        this.password = password;
     }
 }

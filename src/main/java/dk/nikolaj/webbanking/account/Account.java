@@ -7,18 +7,29 @@ public class Account {
     private Long ID;
     private String accountName;
     private Long accountNumber;
+    private Long customerID;
     private BigDecimal balance;
 
     public Account(
             Long ID,
             String accountName,
             Long accountNumber,
+            Long customerID,
             BigDecimal balance
     ) {
         this.ID = ID;
         this.accountName = accountName;
         this.accountNumber = accountNumber;
+        this.customerID = customerID;
         this.balance = balance;
+    }
+
+    public Long getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(Long customerID) {
+        this.customerID = customerID;
     }
 
     public Long getID() {

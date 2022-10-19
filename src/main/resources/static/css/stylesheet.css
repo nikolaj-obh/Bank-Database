@@ -1,0 +1,137 @@
+nav {
+  background-color: grey;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav a {
+  display: inline;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-right:1px solid black;
+}
+  
+footer {
+  float: left;
+  width: 33%;
+  padding: 50px;
+}
+
+ul {
+  float: left;  
+}
+
+body {
+  background-color: white;
+}
+
+.page-content {
+  width: 95%;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: lightgrey;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 6px 8px -1px rgba(0,0,0,0.56);
+  -moz-box-shadow: 4px 6px 8px -1px rgba(0,0,0,0.56);
+  box-shadow: 4px 6px 8px -1px rgba(0,0,0,0.56);
+  padding-bottom: 20px;
+  margin-left: 2.5%;
+}
+
+.page-content p {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: black;
+}
+
+.page-content a {
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: black;
+  background-color: lightslategrey;
+  -webkit-box-shadow: 4px 6px 8px -1px rgba(0,0,0,0.56);
+  -moz-box-shadow: 4px 6px 8px -1px rgba(0,0,0,0.56);
+  box-shadow: 4px 6px 8px -1px rgba(0,0,0,0.56);
+  border-radius: 4px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 275px;
+  position: fixed;
+  z-index: 0;
+  top: 1;
+  left: 0;
+  background-color: rgb(43, 40, 40);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #ca0000;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}

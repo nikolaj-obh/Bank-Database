@@ -4,25 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../stylesheet.css">
-    <title>Private Banking - We are the best</title>
+    <title>Best car loan</title>
 </head>
 <body>
-    <h1>
-        <img src="/images/bankheader.png" alt="Private Bank"
-        style="width:150px;height:70px;">
-    </h1>
     <nav>
+        <a href="/">Home</a>
         <a href="/news/">News</a>
         <a href="/privateBanking/">Private Banking</a>
         <a href="/carloan/">Car loan</a>
-        <a href="/customerlogin/">Log In</a>
+        <a href="/login/">Log In</a>
     </nav>
+    
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/images/cars.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/car1.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="/images/car2.jpg" style="width:100%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="/images/car3.jpg" style="width:100%">
+        </div>
+    </div>
 
     <div class="page-content">
-        <img src="/images/bank.jpg" alt="Private Bank">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus ex felis, at semper nulla pulvinar ut. Phasellus fringilla metus eu mauris porttitor mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sagittis pellentesque quam a ultricies. Vivamus vehicula magna ante, condimentum ultricies ligula efficitur sit amet. Donec sit amet libero felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris suscipit finibus tortor consectetur hendrerit. Cras ut fermentum lacus. Fusce tempus enim in metus viverra, a mattis orci feugiat. Maecenas sollicitudin ligula vel mattis accumsan. Mauris dolor nulla, laoreet aliquam sem ac, gravida euismod nibh. Aenean ex diam, venenatis eget nunc eget, semper pulvinar eros. Vestibulum sodales ligula ultrices, bibendum elit sit amet, fermentum turpis. Nullam cursus nulla nibh, eget fringilla augue iaculis at. Vivamus facilisis posuere est, non aliquet velit iaculis vitae.</p>
         <p>Nunc at nulla eget ligula iaculis ullamcorper eu vel nibh. Duis sit amet ligula eu enim vehicula elementum sit amet in felis. Phasellus sodales sapien quis tortor fermentum scelerisque sed suscipit ex. Pellentesque ultrices imperdiet dolor id congue. Cras sit amet commodo mauris, sed malesuada lacus. In consequat enim ac neque pharetra, ac maximus nunc sodales. Vestibulum euismod tellus imperdiet, dictum est eget, imperdiet odio.</p>  
         <p>Duis sagittis ut ipsum vel consequat. Ut hendrerit nibh sed diam auctor, sit amet consequat purus posuere. Sed id ex vehicula dui pulvinar scelerisque. Suspendisse tristique congue orci ut pulvinar. Sed mattis, metus ac ultrices suscipit, est tortor tristique felis, pretium auctor velit neque a quam. Proin et quam non purus porta convallis sit amet eu neque. Cras feugiat metus ut sem porta, id aliquam est iaculis. Fusce ipsum leo, faucibus sit amet commodo finibus, laoreet eu massa. Nullam ac aliquet turpis, sed pulvinar sapien. Mauris sed magna nec risus condimentum dictum ultrices eu risus. Quisque et sollicitudin eros. Vestibulum ullamcorper, nunc ut gravida eleifend, neque dui pharetra lectus, quis tristique nisl enim at enim. Aenean quis ligula vel tellus ullamcorper rhoncus in id purus. Cras malesuada in nisi quis interdum. Duis vulputate aliquam elit, a hendrerit urna rutrum nec.</p>
     </div>
+        <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < slides.length; i++) {slides[i].className = slides[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        slides[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Changes image every 5 seconds
+        }
+        </script>
+     
 </body>
 </html>

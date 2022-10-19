@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+</head>
+<body onload="parent.show_notification();create_tabledata();" onunload="mark_read();">
+    <h1>Private Bank</h1>
+      <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="#">Overview</a>
+        <br>
+        <a href="#">Transactions</a>
+        <br>
+        <a href="#">Accounts</a>
+        <br>
+        <a href="#">Stocks</a>
+        <br>
+        <a href="#">Contact us</a>
+        <br>
+        <a href="#">Sign Out</a>
+    </div>
+    <div id="account_overview">
+        <table id="account_table"  style="border-collapse:collapse;" cellpadding=15px; width=20%>
+            <tr>
+                <th>Account Name</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

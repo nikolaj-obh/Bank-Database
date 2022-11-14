@@ -1,40 +1,29 @@
-package dk.nikolaj.webbanking.customer;
+package dk.nikolaj.webbanking.model;
 
-import java.util.Date;
-
-public class Customer {
+public class Employee {
 
     private Long ID;
     private String firstName;
     private String lastName;
-    private Date birthday;
+    private Boolean isAdmin;
     private String email;
     // TODO find correct datatype for passwords:
     private Character password;
-    private String address;
-    private String city;
-    private String postal;
 
-    public Customer(
+    public Employee(
             Long ID,
             String firstName,
             String lastName,
-            Date birthday,
+            Boolean isAdmin,
             String email,
-            Character password,
-            String address,
-            String city,
-            String postal
+            Character password
     ) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.birthday = birthday;
+        this.isAdmin = isAdmin;
         this.email = email;
         this.password = password;
-        this.address = address;
-        this.city = city;
-        this.postal = postal;
     }
 
     public Long getID() {
@@ -61,12 +50,12 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public Date getBirthday() {
-        return birthday;
+    public Boolean getAdmin() {
+        return isAdmin;
     }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setAdmin(Boolean admin) {
+        isAdmin = admin;
     }
 
     public String getEmail() {
@@ -83,29 +72,5 @@ public class Customer {
 
     public void setPassword(Character password) {
         this.password = password;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getPostal() {
-        return postal;
-    }
-
-    public void setPostal(String postal) {
-        this.postal = postal;
     }
 }

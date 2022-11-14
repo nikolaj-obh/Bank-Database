@@ -1,4 +1,4 @@
-package dk.nikolaj.webbanking.currency;
+package dk.nikolaj.webbanking.model;
 
 import java.util.Objects;
 

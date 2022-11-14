@@ -1,9 +1,10 @@
-package dk.nikolaj.webbanking.account;
+package dk.nikolaj.webbanking.model;
 
 import java.math.BigDecimal;
 
 public class Account {
 
+    //TODO rewrite to match db
     private Long ID;
     private String accountName;
     private Long accountNumber;

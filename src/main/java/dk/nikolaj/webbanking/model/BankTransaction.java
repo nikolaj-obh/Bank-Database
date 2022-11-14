@@ -1,17 +1,18 @@
-package dk.nikolaj.webbanking.transaction;
+package dk.nikolaj.webbanking.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Transaction {
+public class BankTransaction {
 
+    //TODO rewrite to match db
     private Long transactionID;
     private Long senderID;
     private Long receiverID;
     private BigDecimal amount;
     private Date transactionDate;
 
-    public Transaction(
+    public BankTransaction(
             Long transactionID,
             Long senderID,
             Long receiverID,

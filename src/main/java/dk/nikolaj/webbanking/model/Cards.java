@@ -1,6 +1,6 @@
-package dk.nikolaj.webbanking.card;
+package dk.nikolaj.webbanking.model;
 
-public enum Card {
+public enum Cards {
     VISA,
     VISA_ELECTRON,
     MASTERCARD,

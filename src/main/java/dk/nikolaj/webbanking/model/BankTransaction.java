@@ -1,11 +1,18 @@
 package dk.nikolaj.webbanking.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
+@Entity
 public class BankTransaction {
 
     //TODO rewrite to match db
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long transactionID;
     private Long senderID;
     private Long receiverID;
@@ -24,6 +31,9 @@ public class BankTransaction {
         this.receiverID = receiverID;
         this.amount = amount;
         this.transactionDate = transactionDate;
+    }
+
+    public BankTransaction() {
     }
 
     public Long getTransactionID() {

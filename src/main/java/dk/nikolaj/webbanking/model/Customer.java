@@ -1,21 +1,28 @@
 package dk.nikolaj.webbanking.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 public class Customer {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
     private String firstName;
     private String lastName;
     private Date birthday;
     private String email;
-    // TODO find correct datatype for passwords:
+    // TODO find correct datatype for passwords
     private Character password;
     private String address;
     private String city;
     private String postal;
     // TODO add assigned employee to customer
-    // TODO add employee role (for example Manager / Supervisor for other employee)
+    // TODO add employee role (for example Banker, Manager/Supervisor for other employees etc)
 
     public Customer(
             Long ID,
@@ -37,6 +44,9 @@ public class Customer {
         this.address = address;
         this.city = city;
         this.postal = postal;
+    }
+
+    public Customer() {
     }
 
     public Long getID() {

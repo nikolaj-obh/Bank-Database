@@ -1,7 +1,15 @@
 package dk.nikolaj.webbanking.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
     private String firstName;
     private String lastName;
@@ -24,6 +32,9 @@ public class Employee {
         this.isAdmin = isAdmin;
         this.email = email;
         this.password = password;
+    }
+
+    public Employee() {
     }
 
     public Long getID() {

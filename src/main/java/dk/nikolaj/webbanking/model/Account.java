@@ -1,10 +1,17 @@
 package dk.nikolaj.webbanking.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
+@Entity
 public class Account {
 
     //TODO rewrite to match db
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
     private String accountName;
     private Long accountNumber;
@@ -23,6 +30,9 @@ public class Account {
         this.accountNumber = accountNumber;
         this.customerID = customerID;
         this.balance = balance;
+    }
+
+    public Account() {
     }
 
     public Long getCustomerID() {

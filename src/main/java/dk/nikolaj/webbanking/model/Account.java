@@ -1,77 +1,29 @@
 package dk.nikolaj.webbanking.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.Date;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Account {
 
-    //TODO rewrite to match db
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
-    private String accountName;
-    private Long accountNumber;
-    private Long customerID;
-    private BigDecimal balance;
-
-    public Account(
-            Long ID,
-            String accountName,
-            Long accountNumber,
-            Long customerID,
-            BigDecimal balance
-    ) {
-        this.ID = ID;
-        this.accountName = accountName;
-        this.accountNumber = accountNumber;
-        this.customerID = customerID;
-        this.balance = balance;
-    }
-
-    public Account() {
-    }
-
-    public Long getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(Long customerID) {
-        this.customerID = customerID;
-    }
-
-    public Long getID() {
-        return ID;
-    }
-
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
-
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
-    public Long getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(Long accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-    }
+    private BigDecimal accountBalance;
+    private Long branchID;
+    private Date dateOpened;
+    private String accountType;
 }

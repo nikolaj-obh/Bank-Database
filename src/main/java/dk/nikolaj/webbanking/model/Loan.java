@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -17,16 +14,26 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "loans")
 public class Loan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
+    @Column(name = "loan_duration")
     private BigDecimal durationInYears;
+    @Column(name = "start_date")
     private Date loanStartDate;
+    @Column(name = "interest_rate")
     private BigDecimal interestRate;
+    @Column(name = "amount_taken")
     private BigDecimal loanAmountTaken;
+    @Column(name = "amount_repaid")
     private BigDecimal loanAmountRepaid;
+    @Column(name = "loan_type")
     private String loanType;
-    private Long customerID;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 }

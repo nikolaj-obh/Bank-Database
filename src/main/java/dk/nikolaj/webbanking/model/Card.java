@@ -5,10 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -17,21 +14,21 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "credit_cards")
 public class Card {
 
+    // TODO implement maximum limit for credit card (eg. 25.000 dkk a month)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
+    @Column(name = "card_number")
     private String cardNumber;
+    @Column(name = "maximum_limit")
     private BigDecimal maximumLimit;
+    @Column(name = "expiry_date")
     private Date expiryDate;
-    private Integer creditScore;
-    private Long customerID;
 
-    // TODO implement credit score
-    //https://www.nerdwallet.com/article/finance/credit-score-ranges-and-how-to-improve
-    //A score of 720 or higher is generally considered excellent credit.
-    //A score between 690 and 719 is considered good credit.
-    //Scores between 630 and 689 are fair credit.
-    //And scores of 629 or below are poor credit.
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 }

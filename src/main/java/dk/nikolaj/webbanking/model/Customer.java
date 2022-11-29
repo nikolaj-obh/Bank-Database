@@ -1,5 +1,6 @@
 package dk.nikolaj.webbanking.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_id")
     private Long ID;
     @Column(name = "first_name")
     private String firstName;
@@ -29,11 +31,13 @@ public class Customer {
     private Character gender;
     @Column(name = "date_of_birth")
     private Date birthday;
-    @Column(name = "address")
+    @Column(name = "street_address")
     private String address;
     @Column(name = "city")
     private String city;
-    @Column(name = "zip_code")
+    @Column(name = "state")
+    private String state;
+    @Column(name = "zipcode")
     private Integer zipCode;
     @Column(name = "email")
     private String email;
@@ -41,6 +45,7 @@ public class Customer {
     // TODO find correct datatype for passwords
     // TODO add assigned employee to customer?
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     private Set<Loan> loans = new HashSet<>();
 }

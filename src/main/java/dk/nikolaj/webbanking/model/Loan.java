@@ -1,5 +1,6 @@
 package dk.nikolaj.webbanking.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,25 +15,27 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "loans")
+@Table(name = "loan")
 public class Loan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "loan_id")
     private Long ID;
-    @Column(name = "loan_duration")
+    @Column(name = "duration_in_years")
     private BigDecimal durationInYears;
-    @Column(name = "start_date")
+    @Column(name = "loan_start_date")
     private Date loanStartDate;
     @Column(name = "interest_rate")
     private BigDecimal interestRate;
-    @Column(name = "amount_taken")
+    @Column(name = "loan_amount_taken")
     private BigDecimal loanAmountTaken;
-    @Column(name = "amount_repaid")
+    @Column(name = "loan_amount_repaid")
     private BigDecimal loanAmountRepaid;
     @Column(name = "loan_type")
     private String loanType;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;

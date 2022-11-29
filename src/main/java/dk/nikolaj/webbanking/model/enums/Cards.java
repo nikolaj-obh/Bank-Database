@@ -1,4 +1,4 @@
-package dk.nikolaj.webbanking.model;
+package dk.nikolaj.webbanking.model.enums;
 
 public enum Cards {
     VISA,

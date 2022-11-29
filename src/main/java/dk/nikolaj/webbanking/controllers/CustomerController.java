@@ -1,7 +1,7 @@
 package dk.nikolaj.webbanking.controllers;
 
 import dk.nikolaj.webbanking.model.Customer;
-import dk.nikolaj.webbanking.service.CustomerService;
+import dk.nikolaj.webbanking.service.interfaces.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

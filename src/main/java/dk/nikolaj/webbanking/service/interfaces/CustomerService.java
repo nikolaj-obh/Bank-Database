@@ -1,4 +1,4 @@
-package dk.nikolaj.webbanking.service;
+package dk.nikolaj.webbanking.service.interfaces;
 
 import dk.nikolaj.webbanking.model.Customer;
 

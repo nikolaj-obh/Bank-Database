@@ -1,0 +1,15 @@
+--INSERT INTO branches (branch_name, address, city, state, zip_code, phone_number) VALUES ('City Bank Manhattan', '402 34th Street', 'New York City', 'NY', '10121', '212-111-9999');
+--INSERT INTO branches (branch_name, address, city, state, zip_code, phone_number) VALUES ('City Bank Brooklyn', '100 Tillary St', 'New York City', 'NY', '11201', '212-112-8888');
+--INSERT INTO branches (branch_name, address, city, state, zip_code, phone_number) VALUES ('City Bank New Jersey', '300 County Rd 637', 'Jersey City', 'NJ', '07302', '732-303-7777');
+--
+--INSERT INTO accounts (account_balance, branch_id, date_opened, account_type) VALUES ('10000', '', '', 'savings');
+--INSERT INTO accounts (account_balance, branch_id, date_opened, account_type) VALUES ('800', '', '', 'spending');
+--INSERT INTO accounts (account_balance, branch_id, date_opened, account_type) VALUES ('458372', '', '', 'savings');
+--
+--INSERT INTO customers (first_name, last_name, gender, date_of_birth, address, city, zipcode, email) VALUES ('John', 'Doe', 'M', '', '', '', '', 'johndoe@gmail.com');
+--INSERT INTO customers (first_name, last_name, gender, date_of_birth, address, city, zipcode, email) VALUES ('Second', 'Customer', 'F', '', '', '', '', 'sc@gmail.com');
+--INSERT INTO customers (first_name, last_name, gender, date_of_birth, address, city, zipcode, email) VALUES ('Third', 'Customer', 'M', '', '', '', '', 'third.c@hotmail.com');
+--
+--INSERT INTO employees (first_name, last_name, gender, is_admin, email) VALUES ('Employee', 'One', 'm', '1', 'emp1@bank.com');
+--INSERT INTO employees (first_name, last_name, gender, is_admin, email) VALUES ('Employee', 'Two', 'f', '0', 'emp2@bank.com');
+--INSERT INTO employees (first_name, last_name, gender, is_admin, email) VALUES ('Empl Third', 'One', 'm', '0', 'emp3@bank.com');

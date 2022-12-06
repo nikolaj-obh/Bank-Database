@@ -14,11 +14,12 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "bank_transactions")
+@Table(name = "banking_transactions")
 public class BankTransaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "transaction_id")
     private Long transactionID;
     @Column(name = "transaction_type")
     private String transactionType;
@@ -26,7 +27,7 @@ public class BankTransaction {
     private String description;
     @Column(name = "amount")
     private BigDecimal amount;
-    @Column(name = "transaction_date")
+    @Column(name = "date")
     private Date transactionDate;
 
     @ManyToOne

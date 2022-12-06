@@ -14,13 +14,14 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "card_transactions")
+@Table(name = "cc_transactions")
 public class CardTransaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "transaction_id")
     private Long ID;
-    @Column(name = "card_number")
+    @Column(name = "cc_number")
     private String CardNumber;
     @Column(name = "transaction_date")
     private Date transactionDate;

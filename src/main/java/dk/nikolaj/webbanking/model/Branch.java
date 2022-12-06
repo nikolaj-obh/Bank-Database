@@ -17,16 +17,17 @@ public class Branch {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "branch_id")
     private Long ID;
     @Column(name = "branch_name")
     private String branchName;
-    @Column(name = "address")
+    @Column(name = "street_address")
     private String address;
     @Column(name = "city")
     private String city;
-    @Column(name = "state", columnDefinition = "char(2)")
-    private Character state;
-    @Column(name = "zip_code")
+    @Column(name = "state")
+    private String state;
+    @Column(name = "zipcode")
     private Integer zipcode;
     @Column(name = "phone_number")
     private String phoneNumber;

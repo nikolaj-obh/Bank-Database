@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
@@ -34,10 +33,12 @@ public class EmployeeController {
             return new ResponseEntity<Employee>(HttpStatus.NOT_FOUND);
         }
     }
+
     @PostMapping("/")
     public void add(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Employee employee, @PathVariable Long id) {
         try {
@@ -49,6 +50,7 @@ public class EmployeeController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
 

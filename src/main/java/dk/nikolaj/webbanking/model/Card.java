@@ -20,6 +20,7 @@ public class Card {
     // TODO implement maximum limit for credit card (eg. 25.000 dkk a month)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "card_id")
     private Long ID;
     @Column(name = "card_number")
     private String cardNumber;

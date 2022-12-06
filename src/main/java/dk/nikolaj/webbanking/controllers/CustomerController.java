@@ -33,10 +33,12 @@ public class CustomerController {
             return new ResponseEntity<Customer>(HttpStatus.NOT_FOUND);
         }
     }
+
     @PostMapping("/")
     public void add(@RequestBody Customer customer) {
         customerService.saveCustomer(customer);
     }
+
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@RequestBody Customer customer, @PathVariable Long id) {
         try {
@@ -48,6 +50,7 @@ public class CustomerController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
 

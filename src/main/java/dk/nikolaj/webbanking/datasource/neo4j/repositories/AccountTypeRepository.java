@@ -5,5 +5,5 @@ import org.springframework.data.neo4j.repository.Neo4jRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository("Neo4jAccountTypeRepository")
-public interface AccountTypeRepository extends Neo4jRepository<AccountType, Long> {
+public interface AccountTypeRepository extends Neo4jRepository<AccountType, String> {
 }

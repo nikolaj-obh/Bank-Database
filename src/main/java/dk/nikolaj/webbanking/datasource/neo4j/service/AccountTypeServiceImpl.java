@@ -21,7 +21,7 @@ public class AccountTypeServiceImpl implements AccountTypeService {
     }
 
     public AccountType getAccountType(Long id) {
-        return accountTypeRepository.findById(id).get();
+        return accountTypeRepository.findById(String.valueOf(id)).get();
     }
 
     public void saveAccountType(AccountType accountType) {
@@ -29,6 +29,6 @@ public class AccountTypeServiceImpl implements AccountTypeService {
     }
 
     public void deleteAccountType(Long id) {
-        accountTypeRepository.deleteById(id);
+        accountTypeRepository.deleteById(String.valueOf(id));
     }
 }

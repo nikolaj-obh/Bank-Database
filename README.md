@@ -1,4 +1,4 @@
-# Bank database
+# Bank Database
 ### Installation Procedure:
 1. Clone the project to your computer.
 2. Open the dump.sql file in MySQL Workbench from the sqldump folder.

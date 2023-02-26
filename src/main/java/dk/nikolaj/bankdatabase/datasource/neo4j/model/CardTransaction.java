@@ -18,9 +18,12 @@ public class CardTransaction {
     @Id
     @GeneratedValue
     private Long ID;
-    @Property(name = "loan_type")
+    @Property(name = "card_number")
     private String CardNumber;
+    @Property(name = "transaction_date")
     private Date transactionDate;
+    @Property(name = "amount")
     private BigDecimal amount;
+    @Property(name = "merchant_details")
     private String merchantDetails;
 }

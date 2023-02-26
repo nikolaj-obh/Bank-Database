@@ -42,6 +42,6 @@ public class Customer {
     // TODO find correct datatype for passwords
     // TODO add assigned employee to customer?
 
-    @Relationship(type = "HAS_LOAN")
+    @Relationship(type = "HAS_LOAN", direction = Relationship.Direction.OUTGOING)
     private Set<Loan> loans = new HashSet<>();
 }

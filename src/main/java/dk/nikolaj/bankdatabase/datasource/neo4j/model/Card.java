@@ -20,11 +20,13 @@ public class Card {
     @Id
     @GeneratedValue
     private Long ID;
-    @Property(name = "loan_type")
+    @Property(name = "card_number")
     private String cardNumber;
+    @Property(name = "maximum_limit")
     private BigDecimal maximumLimit;
+    @Property(name = "expiry_date")
     private Date expiryDate;
 
-    @Relationship
+    @Relationship(type = "HAS_CARD")
     private Customer customer;
 }

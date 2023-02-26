@@ -7,3 +7,5 @@
 5. Launch the application.
 6. To test the CRUD operations go to the following SwaggerUI url.
    http://localhost:8080/swagger-ui/index.html#/
+
+Link for neo4j database gui: http://localhost:7474/browser/

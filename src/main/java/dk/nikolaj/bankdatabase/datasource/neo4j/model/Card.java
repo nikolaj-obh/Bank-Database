@@ -5,6 +5,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Property;
 import org.springframework.data.neo4j.core.schema.Relationship;
 
 import java.math.BigDecimal;
@@ -19,6 +20,7 @@ public class Card {
     @Id
     @GeneratedValue
     private Long ID;
+    @Property(name = "loan_type")
     private String cardNumber;
     private BigDecimal maximumLimit;
     private Date expiryDate;

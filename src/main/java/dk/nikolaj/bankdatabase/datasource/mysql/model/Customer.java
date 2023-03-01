@@ -41,9 +41,11 @@ public class Customer {
     private Integer zipCode;
     @Column(name = "email")
     private String email;
+    // TODO implement login with email & password
+    // TODO find correct datatype for passwords
+    // TODO add assigned employee to customer?
 
     @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     private Set<Loan> loans = new HashSet<>();
 }
-

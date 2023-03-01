@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.neo4j.core.schema.Node;
+import org.springframework.data.neo4j.core.schema.Property;
 
 import java.math.BigDecimal;
 
@@ -13,6 +14,8 @@ import java.math.BigDecimal;
 public class AccountType {
 
     @Id
+    @Property(name = "account_type")
     private String accountType;
+    @Property(name = "minimum_balance_restriction")
     private BigDecimal minimumBalanceRestriction;
 }
